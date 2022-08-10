@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+## Quote generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The random quote generator that can be easily copied and shared via twitter.
 
-## Available Scripts
+![Main](./readme-images/main.png)
 
-In the project directory, you can run:
+## Installation and Setup Instructions
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-### `npm start`
+Installation:  
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To Start Server:  
+```
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To Visit App:  
+```
+localhost:3000
+```
 
-### `npm test`
+## Reflection
+The project was created to put my front-end development skills to test what I've learned up to this point. I used a mix of HTML, JavaScript, JSX, CSS, Bootstrap, and React to complete it. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The aim was to built an application that generates inspirational quotes. The quote can be copied to the clipboard and shared via twitter.
 
-### `npm run build`
+I chose the `create-react-app` boilerplate to minimize the initial setup and invest more time into writing the code. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Working on this project, I built out a user interface with stateful components and create stateful context provider to store state data in a single location. I created a custom hook for making a fetch request and used `useRef` to get to the Twitter href attribute directly. I also used `useState` and `useEffect` to enhance rendering performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How the app logic works
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Step 1**
+On the first load, the quote machine displays a certain quote and its author.
 
-### `npm run eject`
+**Step 2**
+When the `new-quote` button is clicked, the app fetches a new quote and its author and displays them.
+The background theme changes with each new quote.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img src="./readme-images/new-quote.png" width="250">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Step 3**
+The current quote can be reposted to Twitter by clicking on the `tweet-quote` button. This element includes the `twitter.com/intent/tweet` path in its href attribute to tweet the current quote.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Step 4**
+The current quote can be copied to the clipboard by clicking on the `copy` button.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="./readme-images/buttons.png" width="200">
 
-## Learn More
+## Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[React Icons](https://react-icons.github.io/react-icons/ )  
+[Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/webpack/ )  

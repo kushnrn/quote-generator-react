@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import RandomQuotes from"./RandomQuotes";
+import QuotesProvider from './QuotesProvider'
 
-function App() {
+/**
+ * The component sits at the root of the tree. 
+ * @returns components that make up the structure of the app – the component that generates quotes and the provider that keeps states of the whole app.
+ */
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QuotesProvider>
+      <RandomQuotes />
+    </QuotesProvider>
   );
 }
-
-export default App;
